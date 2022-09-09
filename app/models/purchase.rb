@@ -3,8 +3,6 @@ class Purchase < ApplicationRecord
   has_many :purchase_items
   has_many :items, through: :purchase_items
 
-  validates :purchase_items, presence: true
-
   def total
     total = 0
     self.purchase_items.each do |purchase_item|
