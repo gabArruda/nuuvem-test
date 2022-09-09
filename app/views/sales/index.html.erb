@@ -1,1 +1,29 @@
-<h1 class="text-sky-500">Index world</h1>
+<%= link_to "Upload new file", new_sale_path, class: "block mb-2 bg-cyan-500 text-center text-white active:bg-cyan-600 font-bold uppercase text-sm px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150" %>
+
+<h1 class="text-center font-bold mb-2">Purchase List</h1>
+<div class="overflow-x-auto border-x border-t">
+  <table class="table-auto w-full text-left">
+    <thead class="text-gray-700 uppercase bg-gray-50 border-b">
+      <tr class="font-medium">
+        <th class="p-2">Purchaser</th>
+        <th class="p-2">Item</th>
+        <th class="p-2">Item Price</th>
+        <th class="p-2">Item Amount</th>
+        <th class="p-2">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @purchases.each do |purchase| %>
+        <tr class="bg-white border-b hover:bg-gray-50">
+          <td class="p-2"><%= purchase.purchaser.name %></td>
+          <% purchase.purchase_items.each do |pi| %>          
+            <td class="p-2"><%= pi.item.description %></td>
+            <td class="p-2"><%= pi.item.price %></td>
+            <td class="p-2"><%= pi.count %></td>
+          <% end %>
+          <td class="p-2"><%= purchase.total %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
