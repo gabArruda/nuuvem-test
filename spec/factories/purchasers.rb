@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :purchaser do
     sequence :name do |n|
-      "Name#{n}"
+      "Purchaser#{n}"
     end
   end
 end
