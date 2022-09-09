@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version 3.1.2
 
-Things you may want to cover:
+* System dependencies: Postgresql, Ruby 3.1.2, yarn
 
-* Ruby version
+* How to run the project:
 
-* System dependencies
+- open the project folder
+- run the command: rails db:create
+- run the command: rails db:migrate
+- run the server with: rails server
+- open localhost:3000 in the browser
 
-* Configuration
+* How to run the tests:
+- run the command: rspec spec
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
